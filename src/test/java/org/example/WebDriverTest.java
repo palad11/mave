@@ -10,8 +10,7 @@ import org.junit.Test;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-public class WebDriverTest {
-    private WebDriver driver;
+public class WebDriverTest extends BaseTest{
     private static Logger LOGGER = null;
 
     @BeforeClass
@@ -21,22 +20,7 @@ public class WebDriverTest {
         LOGGER = LogManager.getLogger();
     }
 
-    @BeforeClass
-    public static void setupClass() {
-        WebDriverManager.chromedriver().setup();
-    }
 
-    @Before
-    public void setupTest() {
-        driver = new ChromeDriver();
-    }
-
-    @After
-    public void teardown() {
-        if (driver != null) {
-            driver.quit();
-        }
-    }
     @Test
     public void webdriverTest() {
         LOGGER.warn("Entering application.");
