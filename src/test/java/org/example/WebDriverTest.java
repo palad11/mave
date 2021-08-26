@@ -39,10 +39,10 @@ public class WebDriverTest {
     }
     @Test
     public void webdriverTest() {
-        LOGGER.info("Entering application.");
+        LOGGER.warn("Entering application.");
         System.out.println("hello world");
         driver.get("https://passport.yandex.ru/auth");
-        LOGGER.info("Exiting application.");
+        LOGGER.error("Exiting application.");
 
     }
 
